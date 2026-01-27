@@ -11,3 +11,5 @@ tools:
       url: http://localhost:8084/mcp
     tool_filter:
     - Similarity_cluster_testcases_dbscan
+sub_agents:
+- config_path: ../data_inject_agent/root_agent.yaml
