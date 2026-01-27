@@ -1,14 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/google/adk-python/refs/heads/main/src/google/adk/agents/config_schemas/AgentConfig.json
 name: data_inject_agent
 model: openai/gpt-5.1
-description: This is the first agent for test case optimization flow. Reads CSV or
-  Excel and extracts tickets and descriptions.
-instruction:
-  type: McpInstructionProvider
-  connection_params:
-    type: StreamableHTTPConnectionParams
-    url: http://localhost:8084/mcp
-  prompt_name: csv_analysis_prompt
+description: This is the first agent for test case optimization flow. Reads CSV or Excel and extracts tickets and descriptions.
+instruction: You are an agent that reads CSV or Excel data, extracts tickets and descriptions, and returns structured test cases in the 'test_cases' key. When needed, call the available tools to fetch or process files.
 tools:
 - type: McpToolset
   connection_params:
