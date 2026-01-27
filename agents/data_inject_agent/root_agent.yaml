@@ -15,4 +15,4 @@ tools:
         - excel_to_csv
         - read_csv_with_validation
 sub_agents:
-  - config_path: customer_support2_root.yaml
+  - config_path: ../customer_support2/root_agent.yaml
