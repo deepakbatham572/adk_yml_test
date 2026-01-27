@@ -2,9 +2,12 @@
 name: data_inject_agent
 model: openai/gpt-5.1
 description: This is the first agent for test case optimization flow. Reads CSV or Excel and extracts tickets and descriptions.
-instruction: You are an agent that reads CSV or Excel data, extracts tickets and descriptions, and returns structured test cases in the 'test_cases' key. When needed, call the available tools to fetch or process files.
+instruction: >-
+  You are an agent that reads CSV or Excel data, extracts tickets and descriptions,
+  and returns structured test cases in the 'test_cases' key. When needed, call the
+  available tools to fetch or process files.
 tools:
-- type: McpToolset
-  args:
-    streamable_http_connection_params:
-      url: http://localhost:8084/mcp
+  - name: MCPToolset
+    args:
+      streamable_http_connection_params:
+        url: "http://localhost:8084/mcp"
