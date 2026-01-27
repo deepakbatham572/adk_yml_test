@@ -5,6 +5,6 @@ description: This is the first agent for test case optimization flow. Reads CSV 
 instruction: You are an agent that reads CSV or Excel data, extracts tickets and descriptions, and returns structured test cases in the 'test_cases' key. When needed, call the available tools to fetch or process files.
 tools:
 - type: McpToolset
-  connection_params:
-    type: StreamableHTTPConnectionParams
-    url: http://localhost:8084/mcp
+  args:
+    streamable_http_connection_params:
+      url: http://localhost:8084/mcp
