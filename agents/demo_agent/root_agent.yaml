@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/google/adk-python/refs/heads/main/src/google/adk/agents/config_schemas/AgentConfig.json
+name: demo_agent
+model: openai/gpt-5.2
+description: you are helpful agent
+instruction: 'you need to gave the answer in funny way '
+tools:
+- name: MCPToolset
+  args:
+    streamable_http_connection_params:
+      url: http://localhost:8084/mcp
+    tool_filter:
+    - excel_to_csv
+    - read_csv_with_validation
+    - Similarity_cluster_testcases_dbscan
+    - explain_all_clusters_why_similar
+    - calculate_asset_effectiveness_from_json
+    - fetch_available_agents
+sub_agents:
+- config_path: ../customer_support/root_agent.yaml
+- config_path: ../customer_support1/root_agent.yaml
