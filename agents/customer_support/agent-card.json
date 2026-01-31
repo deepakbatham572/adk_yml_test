@@ -1,0 +1,18 @@
+{
+  "url": "http://localhost:8085/agent-config/a2a/customer_support",
+  "name": "customer_support",
+  "protocol": "a2a",
+  "version": "1.0",
+  "description": "testing agent with yml file with adk",
+  "capabilities": [
+    "message/send"
+  ],
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [],
+  "supportsAuthenticatedExtendedCard": false
+}
