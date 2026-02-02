@@ -1,0 +1,25 @@
+{
+  "capabilities": {},
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
+  "description": "this is for testing a2a",
+  "name": "a2a_agent",
+  "protocolVersion": "0.2.6",
+  "skills": [
+    {
+      "description": "this is for testing a2a",
+      "id": "a2a_agent-skill-1",
+      "name": "A2A",
+      "tags": [
+        "llm",
+        "A2A"
+      ]
+    }
+  ],
+  "supportsAuthenticatedExtendedCard": false,
+  "version": "0.0.1"
+}
