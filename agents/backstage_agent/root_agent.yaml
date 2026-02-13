@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/google/adk-python/refs/heads/main/src/google/adk/agents/config_schemas/AgentConfig.json
+name: backstage_agent
+model: openai/gpt-5.1
+description: This is the testing agent creating from backstage
+instruction: This is the testing agent creating from backstage
+tools:
+- name: streamable_mcp_tool
+  args:
+    streamable_http_connection_params:
+      url: http://localhost:8084/mcp
+    tool_filter:
+    - fetch_available_agents
+sub_agents:
+- config_path: ../a2a_agent/root_agent.yaml
